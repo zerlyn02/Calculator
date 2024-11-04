@@ -37,12 +37,48 @@
             padding-right: 10px;  
             background-color: aliceblue;     
         }
+
+        button {
+            border-radius: 50%;
+            background-color: #ffffff;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            margin: 11px;
+            width: 65px;
+            height: 65px;
+            font-size: x-large;
+            border: none;
+            color: blue;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="card">
             <input type="text" id="result" disabled>
+            <div class="row">
+                <button onclick="clearResult()">C</button>
+                <button onclick="divide()" style="font-size: xx-large;">÷</button>
+                <button onclick="multiply()" style="font-size: xx-large;">×</button>
+                <button onclick="undo()">⌫</button>
+            </div>
+            <div class="row">
+                <button onclick="7()">7</button>
+                <button onclick="8()">8</button>
+                <button onclick="9()">9</button>
+                <button onclick="minus()" style="font-size: xx-large;">-</button>
+            </div>
+            <div class="row">
+                <button onclick="4()">4</button>
+                <button onclick="5()">5</button>
+                <button onclick="6()">6</button>
+                <button onclick="plus()" style="font-size: xx-large;">+</button>
+            </div>
+            <div class="row">
+                <button onclick="7()">7</button>
+                <button onclick="8()">8</button>
+                <button onclick="9()">9</button>
+                <button onclick="minus()" style="font-size: xx-large;">-</button>
+            </div>
         </div>
     </div>
     
