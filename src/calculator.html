@@ -17,7 +17,7 @@
 
         .card {
             width: 390px;
-            height: 530px;
+            height: 570px;
             background: rgb(255, 255, 255);
             box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
             align-items: center;
@@ -38,46 +38,69 @@
             background-color: aliceblue;     
         }
 
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 20px; 
+            margin-top: 10px;
+        }
+
         button {
             border-radius: 50%;
             background-color: #ffffff;
             box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-            margin: 11px;
+            height: 65px; 
             width: 65px;
-            height: 65px;
             font-size: x-large;
             border: none;
             color: blue;
+            cursor: pointer;
+            transition: 0.3s;
         }
+
+        button:hover {
+            background-color: #3b82f6;
+            box-shadow: 0 0 0 5px #3b83f65f;
+            color: #fff;
+        }
+
+        .longbtn {
+            border-radius: 35px;
+            height: 145px;
+            width: 65px;
+            font-size: xx-large;
+            background-color: #ffffff; 
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; /* Match button shadow */
+            color: blue; 
+            grid-row: span 2; /* Span the button across both rows */
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
         <div class="card">
             <input type="text" id="result" disabled>
-            <div class="row">
+            <div class="grid">
                 <button onclick="clearResult()">C</button>
                 <button onclick="divide()" style="font-size: xx-large;">÷</button>
                 <button onclick="multiply()" style="font-size: xx-large;">×</button>
                 <button onclick="undo()">⌫</button>
-            </div>
-            <div class="row">
                 <button onclick="7()">7</button>
                 <button onclick="8()">8</button>
                 <button onclick="9()">9</button>
                 <button onclick="minus()" style="font-size: xx-large;">-</button>
-            </div>
-            <div class="row">
                 <button onclick="4()">4</button>
                 <button onclick="5()">5</button>
                 <button onclick="6()">6</button>
                 <button onclick="plus()" style="font-size: xx-large;">+</button>
-            </div>
-            <div class="row">
-                <button onclick="7()">7</button>
-                <button onclick="8()">8</button>
-                <button onclick="9()">9</button>
-                <button onclick="minus()" style="font-size: xx-large;">-</button>
+                <button onclick="1()">1</button>
+                <button onclick="2()">2</button>
+                <button onclick="3()">3</button>
+                <button onclick="equals()" class="longbtn">=</button> <!-- This button spans two rows -->
+                <button onclick="percentage()">%</button>
+                <button onclick="0()">0</button>
+                <button onclick="dot()">.</button>
             </div>
         </div>
     </div>
